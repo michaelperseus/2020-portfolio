@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  max-width: 1366px;
+  background: green;
+  margin: 0 auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 76px);
+  grid-gap: 16px;
+  padding: 0 139px;
+  #navbar {
+    grid-column: 1 / 13;
+    h1 {
+      justify-self: start;
+    }
+  }
+}
