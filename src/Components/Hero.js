@@ -23,7 +23,7 @@ export default function Hero() {
                 </ul>
             </div>
             <div id="heroButtons">
-                <button><a href="https://hardy-pokemon-challenge.herokuapp.com/" target="black_">Live Version</a></button>
+                <button><a href="https://hardy-pokemon-challenge.herokuapp.com/" target="black_">Live Demo</a></button>
                 <button><a href="https://github.com/Hardytack/pokemon-challenges" target="black_">Github Repo</a></button>
                 <button><a href="#">Case Study</a></button>
             </div>
