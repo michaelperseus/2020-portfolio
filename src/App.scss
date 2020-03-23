@@ -1,24 +1,192 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/*-----Variable Settings-----*/
+$white: #FFF8EB;
+$green: #7DCE94;
+$darkGreen: #70b884;
+$black: #3D3D3F;
+
+body {
+  background: $white;
 }
 
 .App {
   text-align: center;
-  max-width: 1366px;
-  background: green;
   margin: 0 auto;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(12, 76px);
-  grid-gap: 16px;
-  padding: 0 139px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  max-width: 1366px;
   #navbar {
-    grid-column: 1 / 13;
+    grid-column: 1 /  13;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-top: 15px;
+    margin-bottom: 30px;
     h1 {
       justify-self: start;
+      font-size: 2.5em;
+      color: $black;
+      font-weight: 400;
+    }
+    h2 {
+      justify-self: end;
+      color: $green;
+      font-size: 2em;
+      font-weight: 400;
+      transition: .25s all ease;
+      cursor: pointer;
+      &:hover {
+        color: $darkGreen;
+      }
+    }
+  }
+  #hero {
+    grid-column: 1 / 13;
+    background-image: linear-gradient( rgba(0, 0, 0, .9), rgba(0, 0, 0, .9) ), url('./img/HeroBanner.jpg');
+    background-position: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    h1 {
+      color: white;
+      font-size: 4em;
+      grid-column: 1 / 4;
+      margin: 15px 0;
+    }
+    #description {
+      color: $white;
+      grid-column: 1 / 3;
+      font-size: 1.5em;
+      line-height: 1.3em;
+      text-align: left;
+      padding: 20px;
+      p {
+        margin-bottom: 10px;
+      }
+    }
+    #techStack {
+      color: White;
+      text-align: left;
+      font-size: 1.5em;
+      justify-self: center;
+      ul {
+        list-style-type: none;
+        li {
+          margin-left: 30px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+    #heroButtons {
+      grid-column: 1 / 13;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-bottom: 20px;
+      button {
+        display: block;
+        justify-self: center;
+        font-size: 1.5em;
+        border-radius: 10px;
+        cursor: pointer;
+        border: none;
+        background: $green;
+        transition: .2s all ease;
+        &:hover {
+          background: $darkGreen;
+        }
+        a {
+          display: block;
+          width: 100%;
+          padding: 10px 30px;
+          color: $black;
+          text-decoration: none;
+          transition: .2s all ease;
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  #linkContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 30px;
+    margin-bottom: 50px;
+    grid-gap: 50px;
+    justify-items: center;
+    h1 {
+      font-size: 2.5em;
+      font-weight: 400;
+      grid-column: 1 / 6;
+      span {
+        color: $green;
+        font-weight: bold;
+      }
+    }
+    a {
+      text-decoration: none;
+      .title {
+        font-size: 2em;
+        font-weight: 700;
+        color: $black;
+        transition: .25s all ease;
+      }
+      .blurb {
+        display: block;
+        text-decoration: none;
+        color: $green;
+        transition: .25s all ease;
+      }
+      &:hover {
+        .title {
+          color: $green;
+        }
+        .blurb {
+          color: $black;
+        }
+      }
+    }
+  }
+  #otherProjects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    grid-gap: 30px;
+    h1 {
+      grid-column: 1 / 3;
+      font-weight: 400;
+      color: $black;
+      font-size: 2.5em;
+      span {
+        font-weight: 700;
+        color: $green;
+        display: block;
+      }
+    }
+    .project {
+      width: 75%;
+      background: white;
+      img {
+        width: 100%;
+      }
+      h3 {
+        color: $green;
+        font-size: 2em;
+        font-weight: 400;
+      }
+      p {
+        color: $black;
+        text-align: left;
+        padding: 10px;
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
   }
 }
