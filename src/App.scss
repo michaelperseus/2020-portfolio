@@ -10,6 +10,11 @@ $green: #7DCE94;
 $darkGreen: #70b884;
 $black: #3D3D3F;
 
+/*-----Mixin Settings-----*/
+@mixin container-default {
+    display: grid;
+}
+
 body {
   background: $white;
 }
@@ -20,6 +25,9 @@ body {
   font-family: 'Quicksand', sans-serif;
   font-weight: 400;
   max-width: 1366px;
+  a {
+    text-decoration: none;
+  }
   #navbar {
     grid-column: 1 /  13;
     width: 100%;
@@ -36,14 +44,17 @@ body {
     }
     h2 {
       justify-self: end;
-      color: $green;
       font-size: 2em;
       font-weight: 400;
       transition: .25s all ease;
       cursor: pointer;
-      &:hover {
-        color: $darkGreen;
+      a {
+        color: $green;
+        &:hover {
+          color: $darkGreen;
+        }
       }
+      
     }
   }
   #hero {
@@ -114,7 +125,7 @@ body {
     }
   }
   #linkContainer {
-    display: grid;
+    @include container-default;
     grid-template-columns: repeat(5, 1fr);
     margin-top: 30px;
     margin-bottom: 50px;
@@ -154,7 +165,7 @@ body {
     }
   }
   #otherProjects {
-    display: grid;
+    @include container-default;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     grid-gap: 30px;
@@ -234,5 +245,133 @@ body {
         }
       }
     }
+  }
+  #bioContainer {
+    @include container-default;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    grid-gap: 30px;
+    margin-bottom: 100px;
+    h1 {
+      grid-column: 1 / 3;
+      font-weight: 400;
+      color: $black;
+      font-size: 2.5em;
+      span {
+        font-weight: 700;
+        color: $green;
+        // display: block;
+      }
+    }
+    #bioBody {
+      grid-column: 1 / 3;
+      width: 80%;
+      margin: 0 auto;
+      p {
+        text-align: left;
+        font-size: 1.5em;
+        line-height: 1.5em;
+        padding: 10px;
+      }
+    }
+  }
+  #contactContainer {
+    @include container-default;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    grid-gap: 30px;
+    margin-bottom: 100px;
+    h1 {
+      grid-column: 1 / 3;
+      font-weight: 400;
+      color: $black;
+      font-size: 2.5em;
+      span {
+        font-weight: 700;
+        color: $green;
+        font-size: 1.5em;
+        display: block;
+      }
+    }
+    h2 {
+      grid-column: 1 / 3;
+      font-weight: 400;
+      color: $black;
+      font-size: 2em;
+      span {
+        font-weight: 700;
+        color: $green;
+        font-size: 1.2em;
+      }
+    }
+    #responseText {
+      font-size: 1.5em;
+      padding: 20px;
+      border-radius: 20px;
+      margin-top: -20px;
+    }
+    .bad {
+      color: rgba(236, 16, 16, 0.795);
+    }
+    .good {
+      color: $green;
+    }
+    #otherEmail {
+    grid-column: 1 / 3;
+    text-align: center;
+    
+    }
+    form {
+      width: 70%;
+      margin: 0 auto;
+      grid-column: 1 / 3;
+      label {
+        display: block;
+        text-align: left;
+        margin-left: 10px;
+        font-size: 2em;
+      }
+      input, textarea {
+        display: block;
+        width: 100%;
+        font-size: 1.75em;
+        border-radius: 15px;
+        background: $black;
+        color: $white;
+        padding: 15px;
+        font-weight: 100;
+        &:focus {
+          border: none;
+          outline: none;
+        }
+      }
+      textarea {
+        resize: vertical;
+        min-height: 200px;
+        margin-bottom: 25px;
+      }
+      button {
+        background: $darkGreen;
+        color: $white;
+        border-radius: 15px;
+        border: none;
+        font-size: 2em;
+        padding: 10px 25px;
+        cursor: pointer;
+        transition: .25s all ease;
+        &:hover {
+          background: $green;
+        }
+      }
+    }
+    h3 {
+      font-weight: 400;
+      a {
+        color: $darkGreen;
+      }
+    }
+  }
+  #footerContainer {
+    padding-bottom: 15px;
   }
 }
