@@ -38,7 +38,7 @@ export default function Contact() {
                 <button>Send!</button>
             </form>
             <h1 id='responseText' className={response.style ? 'good' : 'bad'}>{response.text}</h1>
-            <h3 id='otherEmail'>Or you can send your own email to <a href="mailto:michaelboro1122@gmail.com">michaelboro1122@gmail.com</a></h3>
+            <h3 id='otherEmail'>Or you can send your own email to <a href="mailto:hello@michaelboro.tech">hello@michaelboro.tech</a></h3>
             <h2>Other ways to <span>Connect!</span></h2>
             <h3>DM me on Twitter <a href="https://twitter.com/codehardycode">@codehardycode</a>!</h3>
             <h3>Connect with me on <a href="https://www.linkedin.com/in/michael-boro-2ba598a6/">Linkedin</a>!</h3>
