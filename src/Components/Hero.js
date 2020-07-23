@@ -9,8 +9,21 @@ export default function Hero() {
                 <p>The site features the ability for users to log in and enter data for every mainline Pokemon game, including what Pokemon they used and a field to add personal notes about the run. Users can also comment on other users runs!</p>
                 {/* <p>The site is currently in Beta Testing so there are still a ton of features to add and bugs to fix, but hopefully it gives a good idea of what I like to do!</p> */}
             </div>
-            <div id="techStack">
+            <div id="techStack" className="bigTech">
                 <ul><span>Featuring:</span>
+                    <li>- Mongoose</li>
+                    <li>- Express</li>
+                    <li>- React</li>
+                    <li>- Node</li>
+                    <li>- React Router</li>
+                    <li>- Sass</li>
+                    <li>- AWS</li>
+                    <li>- bcryptjs</li>
+                    <li>- and more!</li>
+                </ul>
+            </div>
+            <div id="techStack" className="smallTech">
+                <ul><span>Featuring</span>
                     <li>- Mongoose</li>
                     <li>- Express</li>
                     <li>- React</li>

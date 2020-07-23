@@ -27,7 +27,7 @@ export default function Contact() {
 
     return (
         <div id='contactContainer'>
-            <h1>Are you interested in <span>Working Together?</span></h1>
+            <h1 id="contactTitle">Are you interested in <span>Working Together?</span></h1>
             <form onSubmit={handleSubmit}>
                 <label>Your Email</label>
                 <input type='email' value={email} onChange={e => setEmail(e.target.value)} required></input>
@@ -37,7 +37,7 @@ export default function Contact() {
                 <textarea value={message} onChange={e => setMessage(e.target.value)} required></textarea>
                 <button>Send!</button>
             </form>
-            <h1 id='responseText' className={response.style ? 'good' : 'bad'}>{response.text}</h1>
+            <h1 id='responseText' className={response.text === '' ? 'hideResponse' : response.style ? 'good' : 'bad'}>{response.text}</h1>
             <h3 id='otherEmail'>Or you can send your own email to <a href="mailto:hello@michaelboro.tech">hello@michaelboro.tech</a></h3>
             <h2>Other ways to <span>Connect!</span></h2>
             <h3>DM me on Twitter <a href="https://twitter.com/codehardycode">@codehardycode</a>!</h3>
